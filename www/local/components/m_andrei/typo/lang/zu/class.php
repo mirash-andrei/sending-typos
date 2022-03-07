@@ -1,0 +1,8 @@
+<?php
+$MESS['MESSAGE_SENT'] = 'crwdns68687:0crwdne68687:0';
+$MESS['SESSION_CHECK_FAILED'] = 'crwdns68689:0crwdne68689:0';
+$MESS['NO_TYPO_SPECIFIED'] = 'crwdns68691:0crwdne68691:0';
+$MESS['NO_LINK_SPECIFIED'] = 'crwdns68693:0crwdne68693:0';
+$MESS['ADDRESS_WITCH_TYPO'] = 'crwdns145431:0crwdne145431:0';
+$MESS['TYPO_TEXT'] = 'crwdns145433:0crwdne145433:0';
+$MESS['COMMENT'] = 'crwdns145435:0crwdne145435:0';
