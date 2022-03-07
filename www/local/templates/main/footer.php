@@ -15,7 +15,7 @@
 
 <?php
 $APPLICATION->IncludeComponent(
-    'metaratings:typo',
+    'project:typo',
     '',
     [
         'URL' => $_REQUEST['url'],
@@ -28,7 +28,7 @@ $APPLICATION->IncludeComponent(
 
 <?php
 /** Подключаем некоторые стили в футере */
-$APPLICATION->AddBufferContent(['\Metaratings\Template\Styles', 'showFooter']);
+$APPLICATION->AddBufferContent(['\Project\Template\Styles', 'showFooter']);
 ?>
 
 <script>
@@ -38,7 +38,7 @@ $APPLICATION->AddBufferContent(['\Metaratings\Template\Styles', 'showFooter']);
 <script src="<?= \CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH . '/js/main.js', true); ?>" defer></script>
 <script src="<?= \CUtil::GetAdditionalFileURL(SITE_TEMPLATE_PATH . '/js/lazy.js', true); ?>" async></script>
 
-<?php if (\Metaratings\Page::showCounters()) { ?>
+<?php if (\Project\Page::showCounters()) { ?>
     <?php include 'blocks/counters/body-end.php'; ?>
 <?php } ?>
 </body>

@@ -2,9 +2,9 @@
 
 \Bitrix\Main\Localization\Loc::loadMessages(__FILE__);
 
-class MetaratingsTypoComponent extends CBitrixComponent
+class ProjectTypoComponent extends CBitrixComponent
 {
-    use \Metaratings\Helpers\Components\Action;
+    use \Project\Helpers\Components\Action;
 
     public function onPrepareComponentParams($arParams)
     {
@@ -58,14 +58,14 @@ class MetaratingsTypoComponent extends CBitrixComponent
             if (!empty($this->arParams['COMMENT']))
                 $sText .= __('COMMENT') . $this->arParams['COMMENT'];
 
-            $obNotification = new \Metaratings\Helpers\SlackNotification();
+            $obNotification = new \Project\Helpers\SlackNotification();
 
-            if (Metaratings\Region::isEn()) {
-                $obNotification->setChannel('metaratings_typo_eng');
-            } elseif (Metaratings\Region::isEs()) {
-                $obNotification->setChannel('metaratings_typo_es');
+            if (Project\Region::isEn()) {
+                $obNotification->setChannel('Project_typo_eng');
+            } elseif (Project\Region::isEs()) {
+                $obNotification->setChannel('Project_typo_es');
             } else {
-                $obNotification->setChannel('metaratings_typo');
+                $obNotification->setChannel('Project_typo');
             }
 
             $obNotification->send($sText);
